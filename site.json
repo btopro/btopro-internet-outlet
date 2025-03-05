@@ -112,6 +112,22 @@
         "images": [],
         "videos": []
       }
+    },
+    {
+      "id": "item-1c752d29-7a54-46be-86d7-47f0f8c69b7f",
+      "indent": 0,
+      "location": "pages/item-1c752d29-7a54-46be-86d7-47f0f8c69b7f/index.html",
+      "slug": "page-4",
+      "order": 5,
+      "parent": null,
+      "title": "Page",
+      "description": "",
+      "metadata": {
+        "created": 1741197119,
+        "updated": 1741197119,
+        "images": [],
+        "videos": []
+      }
     }
   ]
 }
