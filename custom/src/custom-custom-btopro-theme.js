@@ -95,15 +95,17 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
         --joker-green: var(--ddd-theme-default-opportunityGreen);
       }
       body {
-        margin: 0;
         padding: 0;
+        margin: 0;
         background-color: var(--joker-green);
-        background-image: url('./assets/lightning.gif');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
+        background-position: 0% 0%;
+        background-attachment: absolute;
         background-size: contain;
+        background-image: none;
         background-blend-mode: overlay;
+      }
+      body.lightning {
+        background-image: url('./assets/lightning.gif');
       }
       body.dark-mode {
         background-color: var(--joker-purple);
@@ -118,6 +120,10 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
       activeId: { type: String },
       _items: { type: Array },
     };
+  }
+
+  toggleBodyLightning() {
+    globalThis.document.body.classList.toggle("lightning");
   }
 
   render() {
@@ -147,6 +153,7 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
           ></site-menu-button>
         </li>
       </ul>
+      <simple-icon-button icon="hax:wand" @click="${this.toggleBodyLightning}" title="Toggle Lightning Bolts"></simple-icon-button>
     </header>
     <main>
       <site-active-title></site-active-title>
