@@ -62,13 +62,17 @@
       "slug": "page",
       "order": 1,
       "parent": null,
-      "title": "Page",
-      "description": "",
+      "title": "The Joker",
+      "description": "We don't need a world that is simply maintained and managed by the next maintainers and managers. We need bold movements into a brighter future. We need to live in reality and seek to improve it rath",
       "metadata": {
         "created": 1741197116,
-        "updated": 1741197116,
-        "images": [],
-        "videos": []
+        "updated": 1741200860,
+        "images": {},
+        "videos": {},
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1
       }
     }
   ]
