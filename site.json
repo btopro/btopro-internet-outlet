@@ -21,11 +21,9 @@
       }
     },
     "theme": {
-      "variables": {
-        "icon": "av:library-add",
-        "hexCode": "#3f51b5",
-        "cssVariable": "--simple-colors-default-theme-light-blue-7"
-      }
+      "element": "custom-custom-btopro-theme",
+      "path": "/home/bto108a/Documents/git/btopro/btopro-internet-outlet/custom/src/custom-custom-btopro-theme.js",
+      "name": "CustomCustomBtoproTheme"
     },
     "node": {
       "fields": {}
@@ -50,7 +48,22 @@
         "created": 1741196194,
         "updated": 1741196194
       }
+    },
+    {
+      "id": "item-c93e1efb-38ba-46af-ba4d-e1b911a8213e",
+      "indent": 0,
+      "location": "pages/item-c93e1efb-38ba-46af-ba4d-e1b911a8213e/index.html",
+      "slug": "page",
+      "order": 1,
+      "parent": null,
+      "title": "Page",
+      "description": "",
+      "metadata": {
+        "created": 1741197116,
+        "updated": 1741197116,
+        "images": [],
+        "videos": []
+      }
     }
-  ],
-  "location": "/_sites/btopro-internet-outlet/index.html"
+  ]
 }
