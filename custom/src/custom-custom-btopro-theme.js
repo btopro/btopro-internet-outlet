@@ -98,6 +98,12 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
         margin: 0;
         padding: 0;
         background-color: var(--joker-green);
+        background-image: url('./assets/lightning.gif');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: contain;
+        background-blend-mode: overlay;
       }
       body.dark-mode {
         background-color: var(--joker-purple);
