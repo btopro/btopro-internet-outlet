@@ -2,10 +2,10 @@
  * Copyright 2025 btopro
  * @license Apache-2.0, see License.md for full text.
  */
-import { html, css, HAXCMSLitElementTheme } from "@haxtheweb/haxcms-elements/lib/core/HAXCMSLitElementTheme.js";
-import { store } from "@haxtheweb/haxcms-elements/lib/core/haxcms-site-store.js";
-import { autorun, toJS } from "mobx";
+import { HAXCMSLitElementTheme, css, unsafeCSS, html, store, autorun, toJS } from "@haxtheweb/haxcms-elements/lib/core/HAXCMSLitElementTheme.js";
 import "@haxtheweb/haxcms-elements/lib/ui-components/navigation/site-menu-button.js";
+import "@haxtheweb/haxcms-elements/lib/ui-components/site/site-title.js";
+import "@haxtheweb/haxcms-elements/lib/ui-components/active-item/site-active-title.js";
 /**
  * `CustomCustomBtoproTheme`
  * `CustomCustomBtoproTheme based on modern flex design system`
@@ -27,6 +27,30 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
         :host {
           display: block;
         }
+
+        ul li {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          vertical-align: top;
+        }
+        ul li a {
+          display: block;
+        }
+        button {
+          height: 32px;
+          width: 32px;
+          margin: 0;
+          padding: 0;
+          font-size: var(--ddd-font-size-sm);
+          cursor: pointer;
+        }
+
+        site-menu-button {
+          display: inline-block;
+          vertical-align: top;
+        }
       `,
     ];
   }
@@ -40,16 +64,15 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
 
   render() {
     return html`
-      <h1>CustomCustomBtoproTheme</h1>
+      <site-title></site-title>
       <p>
-        This is a custom theme that extends the HAXCMSTheme base class. It
-        provides a starting point for building a custom theme for HAXcms.
+        This is a custom theme with some simple examples of how you can build whatever you want
       </p>
+      <site-active-title></site-active-title>
       <ul>
         <li>
           <site-menu-button
-            type="previous"
-            position="left"
+            type="prev"
           ></site-menu-button>
         </li>
     ${this._items.map((item, index) => {
@@ -63,17 +86,11 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
         <li>
           <site-menu-button
             type="next"
-            position="left"
           ></site-menu-button>
         </li>
       </ul>
-      <div id="contentcontainer">
-        <div id="slot"><slot></slot></div>
-      </div>
-      </div>
-      <p>
-        The activeId is currently set to: ${this.activeId}
-      </p>
+      <!-- this block and names are required for HAX to edit the content of the page. contentcontainer, slot, and wrapping the slot. -->
+      <div id="contentcontainer"><div id="slot"><slot></slot></div></div>
     `;
   }
 

@@ -42,11 +42,17 @@
       "slug": "welcome",
       "order": 0,
       "parent": null,
-      "title": "Welcome to btopro-internet-outlet",
-      "description": "",
+      "title": "Welcome",
+      "description": "Welcome to your new HAX site! Click edit on the top bar to get started\nWhat can I do?\nWe've got a ton of blocks that are easy to use and get a lot done with little effort, so much in fact we made a l",
       "metadata": {
         "created": 1741196194,
-        "updated": 1741196194
+        "updated": 1741197781,
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "videos": {},
+        "images": {}
       }
     },
     {
