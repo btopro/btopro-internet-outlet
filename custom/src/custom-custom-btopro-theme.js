@@ -27,10 +27,14 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
         :host {
           display: block;
           padding: var(--ddd-spacing-10) var(--ddd-spacing-20);
-          --joker-purple: var(--ddd-theme-default-wonderPurple);
-          --joker-green: var(--ddd-theme-default-opportunityGreen);
           max-width: 960px;
           margin: 0 auto;
+          border: var(--ddd-border-lg);
+          border-width: var(--ddd-spacing-10);
+          border-color: light-dark(var(--joker-purple), var(--joker-green));
+          background-color: light-dark(var(--ddd-theme-default-slateMaxLight
+          ), var(--ddd-theme-default-coalyGray));
+          color: light-dark(var(--ddd-theme-default-coalyGray), var(--ddd-theme-default-slateMaxLight));
         }
 
         site-title {
@@ -64,8 +68,8 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
         }
 
         .active button {
-          background-color: var(--joker-purple);
-          color: var(--joker-green);
+          background-color: light-dark(var(--joker-purple), var(--joker-green));
+          color: light-dark(var(--joker-green), var(--joker-purple));
           font-weight: bold;
         }
 
@@ -73,6 +77,26 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
           display: inline-block;
           vertical-align: top;
         }
+      `,
+    ];
+  }
+  // allows for global styles to be set against the entire document
+  HAXCMSGlobalStyleSheetContent() {
+    return [
+      ...super.HAXCMSGlobalStyleSheetContent(),
+      css`
+      :root {
+        --joker-purple: var(--ddd-theme-default-wonderPurple);
+        --joker-green: var(--ddd-theme-default-opportunityGreen);
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--joker-green);
+      }
+      body.dark-mode {
+        background-color: var(--joker-purple);
+      }
       `,
     ];
   }

@@ -70,26 +70,6 @@
         "images": [],
         "videos": []
       }
-    },
-    {
-      "id": "item-8bf37f32-2e4a-414e-a09d-4c40ec59dbc7",
-      "indent": 0,
-      "location": "pages/item-8bf37f32-2e4a-414e-a09d-4c40ec59dbc7/index.html",
-      "slug": "page-1",
-      "order": 2,
-      "parent": null,
-      "title": "Page",
-      "description": "This is the beginning of the end of web developmentw orkslfows. Gluid publisshing and web develiopment is with in our reach. We need only thoink the things we are trying to do and they will be accomp",
-      "metadata": {
-        "created": 1741197117,
-        "updated": 1741198440,
-        "images": {},
-        "videos": {},
-        "published": true,
-        "hideInMenu": false,
-        "locked": false,
-        "readtime": 1
-      }
     }
   ]
 }
