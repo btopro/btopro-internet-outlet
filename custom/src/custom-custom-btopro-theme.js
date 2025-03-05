@@ -30,11 +30,16 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
           max-width: 960px;
           margin: 0 auto;
           border: var(--ddd-border-lg);
-          border-width: var(--ddd-spacing-10);
+          border-width: var(--ddd-spacing-5);
+          border-radius: var(--ddd-radius-lg);
           border-color: light-dark(var(--joker-purple), var(--joker-green));
           background-color: light-dark(var(--ddd-theme-default-slateMaxLight
           ), var(--ddd-theme-default-coalyGray));
           color: light-dark(var(--ddd-theme-default-coalyGray), var(--ddd-theme-default-slateMaxLight));
+        }
+
+        .wrapper {
+          border-radius: var(--ddd-radius-lg);
         }
 
         site-title {
@@ -111,38 +116,43 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
 
   render() {
     return html`
-  <header>
-    <site-title></site-title>
-    <ul>
-      <li>
-        <site-menu-button
-          type="prev"
-          position="top"
-        ></site-menu-button>
-      </li>
-  ${this._items.map((item, index) => {
-    return html`
-      <li class="${item.id === this.activeId ? "active" : ""}">
-        <a href="${item.slug}"><button title="${item.title}">${(index+1)}</button></a>
-      </li>
-    `;
-  }
-  )}
-      <li>
-        <site-menu-button
-          type="next"
-          position="top"
-        ></site-menu-button>
-      </li>
-    </ul>
-  </header>
-  <main>
-    <site-active-title></site-active-title>
-    <article>
-      <!-- this block and names are required for HAX to edit the content of the page. contentcontainer, slot, and wrapping the slot. -->
-      <div id="contentcontainer"><div id="slot"><slot></slot></div></div>
-    </article>
-  </main>
+    <div class="wrapper">
+    <header>
+      <site-title></site-title>
+      <ul>
+        <li>
+          <site-menu-button
+            type="prev"
+            position="top"
+          ></site-menu-button>
+        </li>
+    ${this._items.map((item, index) => {
+      return html`
+        <li class="${item.id === this.activeId ? "active" : ""}">
+          <a href="${item.slug}"><button title="${item.title}">${(index+1)}</button></a>
+        </li>
+      `;
+    }
+    )}
+        <li>
+          <site-menu-button
+            type="next"
+            position="top"
+          ></site-menu-button>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <site-active-title></site-active-title>
+      <article>
+        <!-- this block and names are required for HAX to edit the content of the page. contentcontainer, slot, and wrapping the slot. -->
+        <div id="contentcontainer"><div id="slot"><slot></slot></div></div>
+      </article>
+    </main>
+    <footer>
+      <slot name="footer"></slot>
+    </footer>
+  </div>
     `;
   }
 
