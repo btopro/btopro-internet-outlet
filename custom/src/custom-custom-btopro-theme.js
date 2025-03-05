@@ -26,8 +26,24 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
       css`
         :host {
           display: block;
+          padding: var(--ddd-spacing-10) var(--ddd-spacing-20);
+          --joker-purple: var(--ddd-theme-default-wonderPurple);
+          --joker-green: var(--ddd-theme-default-opportunityGreen);
+          max-width: 960px;
+          margin: 0 auto;
         }
 
+        site-title {
+          font-size: var(--ddd-font-size-l);
+        }
+
+        header {
+          display: flex;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+        }
         ul li {
           display: inline-block;
           margin: 0;
@@ -47,6 +63,12 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
           cursor: pointer;
         }
 
+        .active button {
+          background-color: var(--joker-purple);
+          color: var(--joker-green);
+          font-weight: bold;
+        }
+
         site-menu-button {
           display: inline-block;
           vertical-align: top;
@@ -58,39 +80,45 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
   static get properties() {
     return {
       ...super.properties,
+      activeId: { type: String },
       _items: { type: Array },
     };
   }
 
   render() {
     return html`
-      <site-title></site-title>
-      <p>
-        This is a custom theme with some simple examples of how you can build whatever you want
-      </p>
-      <site-active-title></site-active-title>
-      <ul>
-        <li>
-          <site-menu-button
-            type="prev"
-          ></site-menu-button>
-        </li>
-    ${this._items.map((item, index) => {
-      return html`
-        <li>
-          <a href="${item.slug}"><button title="${item.title}">${(index+1)}</button></a>
-        </li>
-      `;
-    }
-    )}
-        <li>
-          <site-menu-button
-            type="next"
-          ></site-menu-button>
-        </li>
-      </ul>
+  <header>
+    <site-title></site-title>
+    <ul>
+      <li>
+        <site-menu-button
+          type="prev"
+          position="top"
+        ></site-menu-button>
+      </li>
+  ${this._items.map((item, index) => {
+    return html`
+      <li class="${item.id === this.activeId ? "active" : ""}">
+        <a href="${item.slug}"><button title="${item.title}">${(index+1)}</button></a>
+      </li>
+    `;
+  }
+  )}
+      <li>
+        <site-menu-button
+          type="next"
+          position="top"
+        ></site-menu-button>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <site-active-title></site-active-title>
+    <article>
       <!-- this block and names are required for HAX to edit the content of the page. contentcontainer, slot, and wrapping the slot. -->
       <div id="contentcontainer"><div id="slot"><slot></slot></div></div>
+    </article>
+  </main>
     `;
   }
 
@@ -105,7 +133,9 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
   constructor() {
     super();
     this._items = [];
+    this.activeId = null;
     autorun(() => {
+      this.activeId = toJS(store.activeId);
       this._items = toJS(store.manifest.items);
     });
   }

@@ -79,12 +79,16 @@
       "order": 2,
       "parent": null,
       "title": "Page",
-      "description": "",
+      "description": "This is the beginning of the end of web developmentw orkslfows. Gluid publisshing and web develiopment is with in our reach. We need only thoink the things we are trying to do and they will be accomp",
       "metadata": {
         "created": 1741197117,
-        "updated": 1741197117,
-        "images": [],
-        "videos": []
+        "updated": 1741198440,
+        "images": {},
+        "videos": {},
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1
       }
     },
     {
