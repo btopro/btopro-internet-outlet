@@ -80,6 +80,22 @@
         "images": [],
         "videos": []
       }
+    },
+    {
+      "id": "item-9522d3f9-4989-4a26-9622-9fcad6dde615",
+      "indent": 0,
+      "location": "pages/item-9522d3f9-4989-4a26-9622-9fcad6dde615/index.html",
+      "slug": "page-2",
+      "order": 3,
+      "parent": null,
+      "title": "Page",
+      "description": "",
+      "metadata": {
+        "created": 1741197118,
+        "updated": 1741197118,
+        "images": [],
+        "videos": []
+      }
     }
   ]
 }
