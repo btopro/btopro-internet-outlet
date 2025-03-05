@@ -82,6 +82,9 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
           display: inline-block;
           vertical-align: top;
         }
+        simple-icon-button {
+          margin-left: var(--ddd-spacing-10);
+        }
       `,
     ];
   }
