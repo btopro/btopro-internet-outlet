@@ -106,22 +106,6 @@
         "images": [],
         "videos": []
       }
-    },
-    {
-      "id": "item-ea51dedd-c775-43df-ac13-2228641c7f21",
-      "indent": 0,
-      "location": "pages/item-ea51dedd-c775-43df-ac13-2228641c7f21/index.html",
-      "slug": "page-3",
-      "order": 4,
-      "parent": null,
-      "title": "Page",
-      "description": "",
-      "metadata": {
-        "created": 1741197119,
-        "updated": 1741197119,
-        "images": [],
-        "videos": []
-      }
     }
   ]
 }
