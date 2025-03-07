@@ -1,0 +1,79 @@
+{
+  "id": "c2a9ce45-144c-4e0d-a00c-8e884a896286",
+  "title": "btopro-internet-outlet",
+  "author": "",
+  "description": "own course",
+  "license": "by-sa",
+  "metadata": {
+    "author": {},
+    "site": {
+      "name": "btopro-internet-outlet",
+      "logo": "assets/banner.jpg",
+      "settings": {
+        "lang": "en-US",
+        "publishPagesOn": true
+      },
+      "created": 1741196194,
+      "updated": 1741196194,
+      "git": {
+        "vendor": "github",
+        "branch": "gh-pages"
+      }
+    },
+    "theme": {
+      "element": "custom-custom-btopro-theme",
+      "path": "/home/bto108a/Documents/git/btopro/btopro-internet-outlet/custom/src/custom-custom-btopro-theme.js",
+      "name": "CustomCustomBtoproTheme"
+    },
+    "node": {
+      "fields": {}
+    },
+    "build": {
+      "version": "10.0.2",
+      "structure": "course",
+      "type": "own"
+    }
+  },
+  "items": [
+    {
+      "id": "item-479e04bc-c98b-4d0b-9a26-a72923b2d44c",
+      "indent": 0,
+      "location": "pages/item-479e04bc-c98b-4d0b-9a26-a72923b2d44c/index.html",
+      "slug": "welcome",
+      "order": 0,
+      "parent": null,
+      "title": "Welcome",
+      "description": "Welcome to your new HAX site! Click edit on the top bar to get started\nWhat can I do?\nWe've got a ton of blocks that are easy to use and get a lot done with little effort, so much in fact we made a l",
+      "metadata": {
+        "created": 1741196194,
+        "updated": 1741362099,
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "videos": {},
+        "images": {}
+      }
+    },
+    {
+      "id": "item-c93e1efb-38ba-46af-ba4d-e1b911a8213e",
+      "indent": 0,
+      "location": "pages/item-c93e1efb-38ba-46af-ba4d-e1b911a8213e/index.html",
+      "slug": "page",
+      "order": 1,
+      "parent": null,
+      "title": "The Joker",
+      "description": "We don't need a world that is simply maintained and managed by the next maintainers and managers. We need bold movements into a brighter future. We need to live in reality and seek to improve it rath",
+      "metadata": {
+        "created": 1741197116,
+        "updated": 1741200860,
+        "images": {},
+        "videos": {},
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1
+      }
+    }
+  ]
+}

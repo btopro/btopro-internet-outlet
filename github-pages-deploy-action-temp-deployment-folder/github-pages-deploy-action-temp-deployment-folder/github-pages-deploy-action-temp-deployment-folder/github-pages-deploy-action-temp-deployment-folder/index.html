@@ -5,7 +5,7 @@
     {
       "scopes": {
         "./custom/build/": {  
-          "@haxtheweb/": "https://cdn.hax.cloud/cdn/build/es6/node_modules/@haxtheweb/"
+          "@haxtheweb/": "./build/es6/node_modules/@haxtheweb/"
         }
       }
     }
@@ -226,17 +226,17 @@
   </script>
 </head>
 <body vocab="http://schema.org/" prefix="oer:http://oerschema.org cc:http://creativecommons.org/ns dc:http://purl.org/dc/terms/">
-  <section role="alert" id="loading" aria-busy="true">
+  <div id="loading">
     <div class="messaging">
       <div class="progress-line"></div>
-      <h1>Loading..</h1>
+      <h1 role="alert" aria-busy="true">Loading..</h1>
     </div>
-  </section>
+  </div>
   <haxcms-site-builder id="site" file="site.json?2GQKWcJ3ni0xrL2X4_Dw_Sr9SeXqY2Sk3XblmvHVArA"></haxcms-site-builder>
   <script>
     globalThis.MicroFrontendRegistryConfig = globalThis.MicroFrontendRegistryConfig || {};
     globalThis.HAXCMSContext="php";globalThis.__appCDN="./";</script>
   <script src="./build-haxcms.js"></script>
-  <script src="./build.js"></script> 
+  <script src="./build.js"></script>
 </body>
 </html>
