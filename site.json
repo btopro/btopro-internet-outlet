@@ -74,26 +74,6 @@
         "locked": false,
         "readtime": 1
       }
-    },
-    {
-      "id": "item-c4781d8e-c086-435d-ba7d-e9902562b742",
-      "indent": 0,
-      "location": "pages/item-c4781d8e-c086-435d-ba7d-e9902562b742/index.html",
-      "slug": "page-1",
-      "order": 2,
-      "parent": null,
-      "title": "Page",
-      "description": "fsdfsfsfsfsfs\n",
-      "metadata": {
-        "created": 1741209747,
-        "updated": 1741209749,
-        "images": {},
-        "videos": {},
-        "published": true,
-        "hideInMenu": false,
-        "locked": false,
-        "readtime": 1
-      }
     }
   ]
 }

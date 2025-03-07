@@ -28,6 +28,7 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
           display: block;
           padding: var(--ddd-spacing-10) var(--ddd-spacing-20);
           max-width: 960px;
+          min-width: 400px;
           margin: 0 auto;
           border: var(--ddd-border-lg);
           border-width: var(--ddd-spacing-5);
@@ -133,7 +134,6 @@ class CustomCustomBtoproTheme extends HAXCMSLitElementTheme {
     return html`
     <div class="wrapper">
     <header>
-      <site-title></site-title>
       <ul>
         <li>
           <site-menu-button
